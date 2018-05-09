@@ -1,0 +1,6 @@
+jobs:
+  main:
+    image: mvn
+    requires: [~pr, ~commit]
+    steps:
+      test: mvn test
