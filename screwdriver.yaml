@@ -3,4 +3,4 @@ jobs:
     image: mvn
     requires: [~pr, ~commit]
     steps:
-      test: mvn test
+      - test: mvn test
