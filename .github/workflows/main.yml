@@ -35,4 +35,6 @@ jobs:
           mvn
   test:
     runs-on: ubuntu-latest
-  
+    steps:
+      - name: Execute Test Cases
+        run: echo "Running Test Cases"
