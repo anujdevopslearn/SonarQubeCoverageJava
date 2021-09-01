@@ -27,7 +27,7 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: my-artifact
-        path: target/*.war
+        path: target/*.jar
     - name: SonarQube Scanner
       uses: sonarsource/sonarqube-scan-action@master
       env:
