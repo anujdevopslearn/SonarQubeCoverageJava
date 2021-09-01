@@ -30,11 +30,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Execute Shell Script
         run: |
-          pwd
-          ls -lart
-          mvn
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Execute Test Cases
-        run: echo "Running Test Cases"
+          mvn clean install
+      
+      - name: Execute Shell Script
+        run: |
+          mvn clean install
