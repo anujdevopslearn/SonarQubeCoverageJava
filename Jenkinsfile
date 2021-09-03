@@ -23,7 +23,7 @@ node('master'){
 		}
 		
 		stage('Archive Artifacts'){
-			archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
+			archiveArtifacts artifacts: 'target/*.jar', followSymlinks: false
 		}
 	}
 	catch (Exception e){
