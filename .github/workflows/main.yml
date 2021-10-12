@@ -1,5 +1,5 @@
 
-name: Maven Package
+name: Java CI with Maven
 
 on:
   push:
@@ -9,10 +9,8 @@ on:
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
 
     steps:
     - uses: actions/checkout@v2
@@ -21,14 +19,11 @@ jobs:
       with:
         java-version: '11'
         distribution: 'adopt'
-
+        cache: maven
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
-
-    - name: SonarQube Scanner
+      run: mvn clean install -f pom.xml
+    - name: SonarQube Scan
       uses: sonarsource/sonarqube-scan-action@master
       env:
-        # SonarQube server URL
-        SONAR_HOST_URL: http://35.172.192.145:9000
-        # Login or authentication token of a SonarQube user
-        SONAR_TOKEN: ${{ secrets.SONARQUBE_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
