@@ -29,7 +29,8 @@ jobs:
       run: mvn -B package --file pom.xml
     
     - name: Write Settings.xml locally
-      run: echo "${{ secrets.SETTINGSXML }}" > settings.xml
-    
+      run: echo '${{ secrets.SETTINGSXML }}' > settings.xml
+    - name: Write Settings.xml locally
+      run: cat settings.xml
     - name: Publish to Artifactory
       run: mvn deploy -s settings.xml
