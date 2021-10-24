@@ -1,7 +1,7 @@
 node('master'){
 	
 	def mvnHome = tool 'MavenBuildTool'
-	def sonarScannerHome = tool 'SonarQubeScanner'
+	def sonarScannerHome = tool 'Scanner'
 	
 	try {
 		stage('Checkout Code'){
