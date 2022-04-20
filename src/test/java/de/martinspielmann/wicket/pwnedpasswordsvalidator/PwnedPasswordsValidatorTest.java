@@ -41,7 +41,7 @@ public class PwnedPasswordsValidatorTest {
     @Test
     public void testSha1() throws NoSuchAlgorithmException {
         PwnedPasswordsValidator v = new PwnedPasswordsValidator();
-        String sha1 = v.sha1("foo123");
+        String sha1 = v.sha1("foo");
         Assert.assertEquals("0BEEC7B5EA3F0FDBC95D0DD47F3C5BC275DA8A33", sha1);
     }
 
