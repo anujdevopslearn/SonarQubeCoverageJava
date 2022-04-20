@@ -1,4 +1,4 @@
-node('master'){
+node(){
 	
 	def mvnHome = tool 'MavenBuildTool'
 	def sonarScannerHome = tool 'Scanner'
