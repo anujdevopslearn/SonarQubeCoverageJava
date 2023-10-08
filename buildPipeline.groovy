@@ -1,6 +1,6 @@
 node(){
     def sonarScanner = tool name: 'SonarScanner', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
-	def repoName = "https://github.com/anujdevopslearn/SonarQubeCoverageJava.git"
+	def repoName = "https://github.com/anujdevopslearn/SonarQubeCoverageJava"
 	stage('Code Checkout'){
 		git changelog: false, credentialsId: 'GitHubCreds', poll: false, url: repoName
 	}
