@@ -38,7 +38,7 @@ jobs:
   Deployment:
 
     runs-on: macos-latest
-
+    needs: build
     steps:
     - name: Deploy Artifacts
       run: ls -lart
