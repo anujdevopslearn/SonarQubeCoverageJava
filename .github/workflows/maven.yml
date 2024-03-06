@@ -41,7 +41,7 @@ jobs:
     needs: build
     strategy:
       matrix:
-        deployHosts: ${{ vars.HOSTLIST }}
+        deployHosts: ${{ fromJson(vars.HOSTLIST) }}
     steps:
     - uses: actions/download-artifact@v4
       with:
