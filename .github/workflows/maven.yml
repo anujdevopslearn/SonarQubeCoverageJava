@@ -41,7 +41,7 @@ jobs:
     needs: build
     strategy:
       matrix:
-        deployHosts: ['34.227.176.180', '23.23.33.230']
+        deployHosts: ${{ vars.HOSTLIST }}
     steps:
     - uses: actions/download-artifact@v4
       with:
