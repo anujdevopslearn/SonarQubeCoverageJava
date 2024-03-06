@@ -46,3 +46,12 @@ jobs:
         path: .
     - name: Deploy Artifacts
       run: ls -laRt
+    - name: copy file to server
+      uses: appleboy/scp-action@v0.1.7
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASS }}
+        port: 22
+        source: '*.jar'
+        target: /tmp/
