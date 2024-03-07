@@ -1,0 +1,16 @@
+name: Spring Boot CI/CD Pipeline
+
+on:
+  push:
+    branches: [ "master", "develop" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: ./.github/workflows/maven-reusable.yml
