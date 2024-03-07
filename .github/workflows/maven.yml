@@ -7,12 +7,5 @@ on:
     branches: [ "master" ]
 
 jobs:
-
   build:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v4
-    - run : ls -lart .github/workflows/
-    - uses: anujdevopslearn/SonarQubeCoverageJava/.github/workflows/maven-reusable.yml@master
+    uses: ./.github/workflows/maven-reusable.yml
