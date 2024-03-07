@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - run : ls -lart .github/workflows/
-    - uses: .github/workflows/maven-reusable.yml@master
+    - uses: SonarQubeCoverageJava/.github/workflows/maven-reusable.yml@master
